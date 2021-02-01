@@ -20,3 +20,9 @@ AjoutEnseignant:
 AjoutEtudiant:
     path: /enseignant/registerEtudiant
     controller: App\Controller\RegistrationController::register
+AjoutAssurance:
+    path: /admin/ajoutAssurance
+    controller: App\Controller\AdminController::ajouterAssurance
+AjoutLycee:
+    path: /admin/ajoutLycee
+    controller: App\Controller\AdminController::ajouterLycee

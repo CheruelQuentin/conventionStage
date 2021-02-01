@@ -28,6 +28,11 @@ class Assurance
      */
     private $nom;
 
+    /**
+     * @ORM\Column(type="integer", length=14)
+     */
+    private $numeroContrat;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -41,6 +46,18 @@ class Assurance
     public function setNom(string $nom): self
     {
         $this->nom = $nom;
+
+        return $this;
+    }
+
+    public function getNumeroContrat(): ?int
+    {
+        return $this->numeroContrat;
+    }
+
+    public function setNumeroContrat(int $numeroContrat): self
+    {
+        $this->numeroContrat = $numeroContrat;
 
         return $this;
     }
