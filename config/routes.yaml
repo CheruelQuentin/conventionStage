@@ -1,0 +1,22 @@
+page_connexion:
+    path: /
+    controller: App\Controller\SecurityController::login
+
+route_accueil:
+    path: /accueil
+    controller: App\Controller\EtudiantController::index  
+
+listerEtudiant:
+    path: /enseignant/lister
+    controller: App\Controller\EtudiantController::listerEtudiant
+admin:
+  path: /admin
+  controller: App\Controller\AdminController::admin
+
+AjoutEnseignant:
+    path: /admin/registerEnseignant
+    controller: App\Controller\RegistrationController::registerEnseignant
+
+AjoutEtudiant:
+    path: /enseignant/registerEtudiant
+    controller: App\Controller\RegistrationController::register
