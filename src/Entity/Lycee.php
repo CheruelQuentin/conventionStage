@@ -7,7 +7,7 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * Lycee
  *
- * @ORM\Table(name="lycee", indexes={@ORM\Index(name="IDX_E314FD0BB288C3E3", columns={"assurance_id"})})
+ * @ORM\Table(name="lycee")
  * @ORM\Entity
  */
 class Lycee
@@ -85,15 +85,16 @@ class Lycee
     private $proviseurMail;
 
     /**
-     * @var \Assurance
-     *
-     * @ORM\ManyToOne(targetEntity="Assurance")
-     * @ORM\JoinColumns({
-     *   @ORM\JoinColumn(name="assurance_id", referencedColumnName="id")
-     * })
+     * @ORM\Column(type="string", length=255)
      */
-    private $assurance;
+    private $nomAssurance;
 
+    /**
+     * @ORM\Column(type="integer")
+     */
+    private $numeroContrat;
+
+    
     public function getId(): ?int
     {
         return $this->id;
@@ -207,14 +208,26 @@ class Lycee
         return $this;
     }
 
-    public function getAssurance(): ?Assurance
+    public function getNomAssurance(): ?string
     {
-        return $this->assurance;
+        return $this->nomAssurance;
     }
 
-    public function setAssurance(?Assurance $assurance): self
+    public function setNomAssurance(string $nomAssurance): self
     {
-        $this->assurance = $assurance;
+        $this->nomAssurance = $nomAssurance;
+
+        return $this;
+    }
+
+    public function getNumeroContrat(): ?int
+    {
+        return $this->numeroContrat;
+    }
+
+    public function setNumeroContrat(int $numeroContrat): self
+    {
+        $this->numeroContrat = $numeroContrat;
 
         return $this;
     }

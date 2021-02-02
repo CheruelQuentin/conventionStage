@@ -26,3 +26,6 @@ AjoutAssurance:
 AjoutLycee:
     path: /admin/ajoutLycee
     controller: App\Controller\AdminController::ajouterLycee
+AjoutOrganisme:
+    path: /admin/ajoutOrganisme
+    controller: App\Controller\AdminController::ajouterOrganisme
