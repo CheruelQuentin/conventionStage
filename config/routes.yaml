@@ -29,3 +29,18 @@ AjoutLycee:
 AjoutOrganisme:
     path: /admin/ajoutOrganisme
     controller: App\Controller\AdminController::ajouterOrganisme
+AjoutSection:
+    path: /admin/ajoutSection
+    controller: App\Controller\AdminController::ajouterSection
+AjoutTuteur:
+    path: /etudiant/ajoutTuteur
+    controller: App\Controller\AdminController::ajouterTuteur
+AjoutHoraire:
+    path: /etudiant/ajoutHoraire
+    controller: App\Controller\EtudiantController::ajouterHoraire
+AjoutDate:
+    path: /etudiant/ajoutDate
+    controller: App\Controller\EtudiantController::ajouterDate
+AjoutStage:
+    path: /etudiant/ajoutStage
+    controller: App\Controller\EtudiantController::ajouterStage

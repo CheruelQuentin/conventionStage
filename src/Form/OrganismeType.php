@@ -32,7 +32,8 @@ class OrganismeType extends AbstractType
             ->add('fax',TextType::class)
             ->add('mail', EmailType::class)
             ->add('siegeSocial',TextType::class)
-            
+            ->add('nomAssurance', TextType::class)
+            ->add('numeroContrat',IntegerType::class)
        
         ->add('ajouter', SubmitType::class, array('label' => 'Ajouter'))
      ;
