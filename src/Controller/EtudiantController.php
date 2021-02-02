@@ -6,6 +6,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\HttpFoundation\Request;
+//use App\templates\assets ;
 use App\Entity\Etudiant;
 use App\Entity\Horaire;
 use App\Entity\Stage;
@@ -23,9 +24,8 @@ class EtudiantController extends AbstractController
         */
  
          // initialise une variable qui sera exploitée dans la vue
-         $annee = '2020';
-         return $this->render('accueil.html.twig', ['pAnnee' => $annee,
-        ]);				         
+         
+         return $this->render('accueil.html.twig');				         
     }
 
         public function listerEtudiant(){

@@ -1,18 +1,15 @@
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
-    </head>
+{% extends 'entete.html.twig' %}
+{% block content %}
+
+<!DOCTYPE html>
     <body>
         {% if is_granted('ROLE_ADMIN') %}
-        <p>Bonjour Admin</p>
-        
+        <h1>Bonjour Admin</h1>
+
         {% elseif is_granted('ROLE_ENSEIGNANT') %}
         <p>Bonjour Enseignant</p>
         {% else  %}
         <p>Bonjour Etudiant</p>
         {% endif %}
-        
-    </body>
-</html>
+
+{% endblock %}
